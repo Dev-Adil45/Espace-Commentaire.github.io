@@ -17,6 +17,8 @@ form.addEventListener("submit", function(event) {
 
 function addComment(param1, param2 , param3) {
 
+    if (param1 !== "" && param2 !== "" && param3 !== ""){
+       
     let styleContent = document.createElement("div")
     styleContent.classList.add("flex", "space-x-4", "text-sm", "text-gray-500")
 
@@ -38,4 +40,9 @@ function addComment(param1, param2 , param3) {
     border.appendChild(newName)
     border.appendChild(styleComment)
     border.appendChild(newComment)
+    } else {
+        console.log("tous les champs doivent etre remplis")
+    }
 }
+
+
