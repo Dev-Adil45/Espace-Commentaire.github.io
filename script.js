@@ -1,4 +1,6 @@
 let form = document.querySelector("form")
+let alertId = document.getElementById("error-message")
+
 
 
 form.addEventListener("submit", function(event) {
@@ -33,6 +35,8 @@ function addComment(param1, param2 , param3) {
     styleComment.classList.add("prose", "prose-sm", "mt-4", "max-w-none", "text-gray-500")
     let newComment = document.createElement("p")
     newComment.innerHTML = param3
+
+    alertId.style.display = "none"
     
     document.getElementById("comment-list").appendChild(border);
     document.getElementById("comment-list").appendChild(styleContent);
@@ -41,7 +45,8 @@ function addComment(param1, param2 , param3) {
     border.appendChild(styleComment)
     border.appendChild(newComment)
     } else {
-        console.log("tous les champs doivent etre remplis")
+        alertId.style.display = "block"
+        alertId.value = ""
     }
 }
 
