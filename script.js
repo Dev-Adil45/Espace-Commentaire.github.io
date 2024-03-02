@@ -46,8 +46,6 @@ function addComment(param1, param2 , param3) {
     border.appendChild(newComment)
     } else {
         alertId.style.display = "block"
-        alertId.value = ""
-    }
-}
+    }}
 
 
